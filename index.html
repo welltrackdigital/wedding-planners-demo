@@ -325,7 +325,7 @@ body.is-demo .side{top:46px;height:calc(100vh - 46px)}body.is-demo .top{top:46px
 </style>
 </head>
 <body>
-<div class="demo-bar" id="demoBar"><span class="demo-badge">DEMO</span><span class="demo-txt"><b>You are using the free demo</b><span class="demo-long"> — try everything with up to 10 of your own guests</span></span><span class="demo-meter"><b id="demoCount">0 / 10</b><span class="demo-track"><span id="demoFill"></span></span></span><a class="demo-buy" href="https://www.etsy.com/shop/WellTrackDigital" target="_blank" rel="noopener"><span class="demo-buy-long">Get the full version</span><span class="demo-buy-short">Buy</span></a></div>
+<div class="demo-bar" id="demoBar"><span class="demo-badge">DEMO</span><span class="demo-txt"><b>You are using the free demo</b><span class="demo-long"> — try everything with up to 10 of your own guests</span></span><span class="demo-meter"><b id="demoCount">0 / 10</b><span class="demo-track"><span id="demoFill"></span></span></span><a class="demo-buy" href="https://www.etsy.com/listing/4609804973/wedding-planner-app-digital-wedding" target="_blank" rel="noopener"><span class="demo-buy-long">Get the full version</span><span class="demo-buy-short">Buy</span></a></div>
 <div class="app">
   <aside class="side" id="side" aria-label="Sections"></aside>
   <div class="scrim" id="scrim" data-a="closeSide"></div>
@@ -1059,7 +1059,7 @@ function sample(){const keepCur=S.set.currency;S=blank();S.seen=true;S.sample=tr
 
 /* ---------- boot ---------- */
 /* DEMO: up to 10 of your own guests */
-const DLIM=10,ETSY_URL='https://www.etsy.com/shop/WellTrackDigital';
+const DLIM=10,ETSY_URL='https://www.etsy.com/listing/4609804973/wedding-planner-app-digital-wedding';
 const mineG=()=>S.guests.filter(g=>!(S.demoSample||[]).includes(g.id));
 function demoUpd(){const n=Math.min(mineG().length,DLIM);const c=$('#demoCount'),f=$('#demoFill');if(c)c.textContent=n+' / '+DLIM;if(f)f.style.width=(n/DLIM*100)+'%'}
 function demoWall(){closeAllM();openM(mHead('Demo limit reached','heart','The free demo holds up to '+DLIM+' of your own guests')+'<p class="sub">You have tried everything — the 3D stage, checklist, budget, RSVPs, 3D seating, vendors, the day, wedding party and honeymoon. The full Wedding Planner has no limits and keeps your whole wedding saved offline on your device.</p><div class="mf"><button class="btn ghost" data-a="closeM">Keep exploring</button><a class="btn" href="'+ETSY_URL+'" target="_blank" rel="noopener">'+ic('heart')+'Get the full version</a></div>','w')}
